@@ -1,8 +1,3 @@
-# Your input PATH have to be valid. 
-# Otherwise you will get a 0(ZERO) as your OUTPUT.
-
-
-
 import os
 
 
@@ -14,6 +9,11 @@ class NoOFLinesInAProject:
 
     def total_lines(self):
         filecnt, readablefilecnt, cnt = 0, 0, 0
+
+        if not os.path.exists(self.project_path):
+            print('[Warning]: The path you entered does not exist.')
+            self.__init__()
+            self.total_lines()
 
         for dirpath, dirnames, filenames in os.walk(self.project_path):
             for names in filenames:
@@ -39,3 +39,5 @@ if __name__ == '__main__':
     print('Total files: ', total[0])
     print('Readable files: ', total[1])
     print('Total lines: ', total[2])
+
+    
