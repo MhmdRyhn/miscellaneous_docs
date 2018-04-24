@@ -42,14 +42,14 @@ ls -ld .?*
 
 
 ## LAMPP/XAMPP<br>
-Start: `sudo /opt/lampp/lampp start`<br>
-Stop: `sudo /opt/lampp/lampp stop`<br><br>
 Open Control Panel
 ```cmd
 cd /opt/lampp/
 sudo chmod 755 manager-linux-x64.run
 sudo ./manager-linux-x64.run
 ```
+Start: `sudo /opt/lampp/lampp start`<br>
+Stop: `sudo /opt/lampp/lampp stop`
 <br>
 
 
@@ -57,6 +57,13 @@ sudo ./manager-linux-x64.run
 Start: `sudo /etc/init.d/mysql start`<br>
 Stop: `sudo /etc/init.d/mysql stop`
 <br>
+
+
+## System Information<br>
+Info about all installed packages: `dpkg -l` or apt `list --installed` [[More]](https://askubuntu.com/questions/17823/how-to-list-all-installed-packages)<br>
+Package Information: [Info](https://www.howtogeek.com/229682/how-to-find-out-exact-package-names-for-applications-in-linux/)<br>
+System Configuration And Hadware Information: [Go Here](https://www.cyberciti.biz/faq/linux-command-to-find-the-system-configuration-and-hardware-information/)<br>
+Find Out Last System Reboot Time and Date: [Go Here](https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html)<br>
 
 
 
