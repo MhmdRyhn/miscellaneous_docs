@@ -61,7 +61,9 @@ Stop: `sudo /etc/init.d/mysql stop`
 
 ## System Information<br>
 Info about all installed packages: `dpkg -l` or apt `list --installed` [[More]](https://askubuntu.com/questions/17823/how-to-list-all-installed-packages)<br>
-Package Information: [Info](https://www.howtogeek.com/229682/how-to-find-out-exact-package-names-for-applications-in-linux/)<br>
+Package Information: [Go Here](https://www.howtogeek.com/229682/how-to-find-out-exact-package-names-for-applications-in-linux/)<br>
+Package version: If you installed any package using `apt`, to see the version you can try `apt-cache policy package_name
+` [[More]](https://askubuntu.com/questions/440982/how-to-check-installed-program-version)<br> 
 System Configuration And Hadware Information: [Go Here](https://www.cyberciti.biz/faq/linux-command-to-find-the-system-configuration-and-hardware-information/)<br>
 Find Out Last System Reboot Time and Date: [Go Here](https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html)<br>
 
