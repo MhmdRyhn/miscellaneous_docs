@@ -1,0 +1,17 @@
+Apache web server:
+	Start: sudo /etc/init.d/apache2 start
+	Stop: sudo /etc/init.d/apache2 stop
+
+
+LAMPP/XAMPP:
+    Start Control Panel: cd /opt/lampp/
+                         sudo chmod 755 manager-linux-x64.run
+                         sudo ./manager-linux-x64.run
+    Start: sudo /opt/lampp/lampp start
+	Stop: sudo /opt/lampp/lampp stop
+
+
+MySQL:
+	Start: sudo /etc/init.d/mysql start
+	Stop: sudo /etc/init.d/mysql stop
+
