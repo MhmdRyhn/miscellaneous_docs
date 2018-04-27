@@ -1,12 +1,24 @@
 # Git Commands<br>
-Git is a Version Controlling System (VCS), used to manage projects. To manage your PROJECT with `git`, enter the following Commands as your need.
+Git is a Version Controlling System (VCS), used to manage projects. To manage your PROJECT with `git`, enter the following Commands as your need.<br><br>
+If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch?v=M2a7OQX8te4&index=1&list=PLoR56CteKZnC0lBlHdnVnq0J3yDhgbi9w) .
 
-## Git Initialize<br>
+
+
+## Click the links below to jump to topic: 
+[Git Initialize](#git-initialize) <br>
+[Adding File or Directory to git](#adding-file-or-directory-to-git) <br>
+
+
+
+## Git Initialize
 **Command:** 
 ```cmd
 git init
 ```
-In a whole Project Directory, **git is to be initialized only once**, and obviously this is the first Command inside a Project Directory.
+In a whole Project Directory, **git is to be initialized only once**, and obviously this is the first Command inside a Project Directory.<br>
+[Return to Index](#click-the-links-below-to-jump-to-topic)
+
+
 
 ## Adding File or Directory to git
 **Adding a File:** 
@@ -37,4 +49,6 @@ git add dir_name
 cd path/to/dirs'/dir 
 git add dir1_name dir1_name dir2_name dirN_name
 ```
+[Return to Index](#click-the-links-below-to-jump-to-topic)
+
 
