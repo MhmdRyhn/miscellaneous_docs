@@ -13,6 +13,7 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 - [Git Commit](#git-commit) <br>
 - [Commit Count](#commit-count) <br>
 - [Viewing the Commit History](#viewing-the-commit-history)
+- [Go back to previous commit](#go-back-to-previous-commit) <br>
 
 
 
@@ -84,10 +85,10 @@ git config user.name "Your Name"
 **Change configuration:** <br>
 Open **.giconfig** file in your home directory (~/.gitconfig) & edit the info and then **save** the file. <br>
 **Viewing your configuration:** <br>
-1. Run `git config <KEY>` to get the value of KEY. KEY can be your user.namer, user.email or some other things. You can check  the keys running `git config --list` <br>
-2. To get username run `git config user.name` in your terminal. <br>
-3. To get user email run `git config user.email` in your terminal. <br>
-4. To get all configuration, run `git config --list` in your terminal. <br><br>
+- Run `git config <KEY>` to get the value of KEY. KEY can be your user.namer, user.email or some other things. You can check  the keys running `git config --list` <br>
+- To get username run `git config user.name` in your terminal. <br>
+- To get user email run `git config user.email` in your terminal. <br>
+- To get all configuration, run `git config --list` in your terminal. <br><br>
 [Return to Index](#index)
 
 
@@ -120,15 +121,15 @@ git commit -m path/to/dirname
 
 
 ## Commit Count
-To get a commit count for a revision (HEAD, master, a commit hash)
+**To get a commit count for a revision (HEAD, master, a commit hash)**
 ```
 git rev-list --count <revision>
 ```
-To get the commit count across all branches
+**To get the commit count across all branches**
 ```
 git rev-list --all --count
 ```
-Following command returns count of commits grouped by committers
+**To count of commits grouped by committers**
 ```
 git shortlog -s
 ```
@@ -136,7 +137,25 @@ git shortlog -s
 [Return to Index](#index)
 
 ## Viewing the Commit History
-[**Watch this Awesome DOCUMENTATION to get clear concept**](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) <br><br>
+[**Watch this awesome Documentation to get clear concept**](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) <br><br>
+[Return to Index](#index)
+
+
+
+## Go back to Previous Commit
+**To view the files' content at a commit**
+```cmd
+git show <commit_hash>
+```
+**To view the Whole Project State at a commit**
+```cmd
+git checkout <commit_hash>
+ls
+```
+**Getting back to last commit, i.e. to master branch**
+```cmd
+git checkout master
+```
 [Return to Index](#index)
 
 
