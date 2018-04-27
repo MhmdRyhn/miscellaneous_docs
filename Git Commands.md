@@ -1,5 +1,6 @@
 # Git Commands<br>
 Git is a Version Controlling System (VCS), used to manage projects. To manage your PROJECT with **Git**, enter the following Commands as your need.<br><br>
+For full Documentation on Git Visit [**Here**](https://git-scm.com/docs/) and [**Here**](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.md#styled-git-log) <br><br>
 If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch?v=M2a7OQX8te4&index=1&list=PLoR56CteKZnC0lBlHdnVnq0J3yDhgbi9w) .
 
 
@@ -10,6 +11,8 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 - [Status of Git](#status-of-git) <br>
 - [Configuring Git](#configuring-git) <br>
 - [Git Commit](#git-commit) <br>
+- [Commit Count](#commit-count) <br>
+- [Viewing the Commit History](#viewing-the-commit-history)
 
 
 
@@ -18,7 +21,7 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 ```cmd
 git init
 ```
-In a whole Project Directory, **git is to be initialized only once**, and obviously this is the first Command inside a Project Directory.<br>
+In a whole Project Directory, **git is to be initialized only once**, and obviously this is the first Command inside a Project Directory.<br><br>
 [Return to Index](#index)
 
 
@@ -59,7 +62,7 @@ git add dir1_name dir1_name dir2_name dirN_name
 ```
 git status
 ```
-This Command will show you the UNTRACKED files, i.e. the files that have not yet been added to git, and the files that have been changed but not yet been committed. <br>
+This Command will show you the UNTRACKED files, i.e. the files that have not yet been added to git, and the files that have been changed but not yet been committed. <br><br>
 [Return to Index](#index)
 
 
@@ -84,7 +87,7 @@ Open **.giconfig** file in your home directory (~/.gitconfig) & edit the info an
 1. Run `git config <KEY>` to get the value of KEY. KEY can be your user.namer, user.email or some other things. You can check  the keys running `git config --list` <br>
 2. To get username run `git config user.name` in your terminal. <br>
 3. To get user email run `git config user.email` in your terminal. <br>
-4. To get all configuration, run `git config --list` in your terminal. <br>
+4. To get all configuration, run `git config --list` in your terminal. <br><br>
 [Return to Index](#index)
 
 
@@ -112,6 +115,28 @@ Or
 ```cmd
 git commit -m path/to/dirname
 ```
+[Return to Index](#index)
+
+
+
+## Commit Count
+To get a commit count for a revision (HEAD, master, a commit hash)
+```
+git rev-list --count <revision>
+```
+To get the commit count across all branches
+```
+git rev-list --all --count
+```
+Following command returns count of commits grouped by committers
+```
+git shortlog -s
+```
+[**Know more HERE**](https://stackoverflow.com/questions/677436/how-do-i-get-the-git-commit-count) <br><br>
+[Return to Index](#index)
+
+## Viewing the Commit History
+[**Watch this Awesome DOCUMENTATION to get clear concept**](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) <br><br>
 [Return to Index](#index)
 
 
