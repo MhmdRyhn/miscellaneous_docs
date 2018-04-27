@@ -5,10 +5,11 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 
 
 ## Index: 
-[Git Initialize](#git-initialize) <br>
-[Adding File or Directory to git](#adding-file-or-directory-to-git) <br>
-[Status of Git](#status-of-git) <br>
-[Configuring Git](#configuring-git) <br>
+- [Git Initialize](#git-initialize) <br>
+- [Adding File or Directory to git](#adding-file-or-directory-to-git) <br>
+- [Status of Git](#status-of-git) <br>
+- [Configuring Git](#configuring-git) <br>
+- [Git Commit](#git-commit) <br>
 
 
 
@@ -87,6 +88,31 @@ Open **.giconfig** file in your home directory (~/.gitconfig) & edit the info an
 [Return to Index](#index)
 
 
+
+## Git Commit
+**Commit Single File:** <br>
+```cmd
+cd path/to/your/file's/dir
+git commit -m "Your Commit Words" filename_with_extension
+```
+Or
+```cmd
+git commit -m "Your Commit Words" path/to/your/filename_with_extension 
+```
+**Commit all Uncommited files:**
+```cmd
+git commit -am "Your Commit Words"
+```
+**Commit all Files under a Directory Tree:**
+```cmd
+cd path/to/your/dirnames's/dir
+git commit -m dirname
+```
+Or
+```cmd
+git commit -m path/to/dirname
+```
+[Return to Index](#index)
 
 
 
