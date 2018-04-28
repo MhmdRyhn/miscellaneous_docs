@@ -9,6 +9,7 @@
 ## Index
 - [Installation](#installation) <br>
 - [Set Password after installation (It is a MUST)](#set-password-after-installation-it-is-a-must) <br>
+- [Check PostgreSQL version](#check-postgresql-version) <br>
 - [View services](#view-services) <br>
 - [To Apply Services](#to-apply-services) <br>
 - [Log In](#log-in) <br>
@@ -34,6 +35,20 @@ sudo -u postgres psql
 \password
 ```
 [Return to Index](#index)
+
+
+
+## Check PostgreSQL version
+**Run following command from terminal**
+```cmd
+psql --version
+```
+**Or, simply run query from PostgreSQL**
+```cmd
+SELECT version();
+```
+[Return to Index](#index)
+
 
 
 
