@@ -1,6 +1,8 @@
 # PostgreSQL Commands
-**PosrgreSQL** is a open source **Relational Database Management System (RDBMS)**. A list of **Linux** terminal commands to play with **PostgreSQL** has been listed below. <br>
+**PosrgreSQL** is a open source **Relational Database Management System (RDBMS)**. A list of **Linux** terminal commands to play with **PostgreSQL** has been listed below. <br><br>
 **Get more commands** [**Here**](https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546) & [**Here**](https://www.postgresql.org/docs/9.1/static/sql-commands.html) <br>
+**Learn PostgreSQL Query from** [**This Tutorial**](http://www.postgresqltutorial.com/) <br>
+
 
 
 
