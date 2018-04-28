@@ -12,7 +12,8 @@
 - [Check PostgreSQL version](#check-postgresql-version) <br>
 - [View services](#view-services) <br>
 - [To Apply Services](#to-apply-services) <br>
-- [Log In](#log-in) <br>
+- [Log In To PostgreSQL](#log-in-to-postgresql) <br>
+- [Log Out from POstgreSQL](#log-out-from-postgresql) <br>
 - [View list of Databases](#view-list-of-databases) <br>
 - [Switching Databases](#switching-databases) <br>
 - [View Tables names in a Database](#view-tables-names-in-a-database) <br>
@@ -71,12 +72,22 @@ service postgresql
 
 
 
-## Log In
+## Log In To PostgreSQL
 **To play with Databases, you must have to Log In** <br>
 ```cmd
 sudo -i -u postgres
 psql
 ```
+[Return to Index](#index)
+
+
+
+## Log Out from POstgreSQL
+```cmd
+\q
+logout
+```
+Or run `\q` & then press <kbd>CTRL</kbd>+<kbd>D</kbd> <br>
 [Return to Index](#index)
 
 
