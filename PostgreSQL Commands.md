@@ -14,6 +14,7 @@
 - [To Apply Services](#to-apply-services) <br>
 - [Log In To PostgreSQL](#log-in-to-postgresql) <br>
 - [Log Out from POstgreSQL](#log-out-from-postgresql) <br>
+- [Create a Database and Database User](#create-a-database-and-database-user) <br>
 - [View list of Databases](#view-list-of-databases) <br>
 - [Switching Databases](#switching-databases) <br>
 - [View Tables names in a Database](#view-tables-names-in-a-database) <br>
@@ -88,6 +89,39 @@ psql
 logout
 ```
 Or run `\q` & then press <kbd>CTRL</kbd>+<kbd>D</kbd> <br>
+[Return to Index](#index)
+
+
+
+## Create a Database and Database User
+During the Postgres installation, an operating system user named postgres was created to correspond to the postgres PostgreSQL administrative user. We need to change to this user to perform administrative tasks <br>
+```cmd
+sudo su - postgres
+```
+You should now be in a shell session for the postgres user. Log into a Postgres session by typing
+```cmd
+psql
+```
+First, we will create a database for our project. Each project should have its own isolated database for security reasons.
+```cmd
+CREATE DATABASE myproject;
+```
+Remember to end all commands at an SQL prompt with a semicolon. <br><br>
+Next, we will create a database user with password
+```cmd
+CREATE USER myprojectuser WITH PASSWORD 'password';
+```
+Afterwards, we'll modify a few of the connection parameters for the user we just created. This will speed up database operations so that the correct values do not have to be queried and set each time a connection is established.
+```cmd
+ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE myprojectuser SET timezone TO <'UTC+6' or 'Your_Timezone>;
+```
+Now, all we need to do is give our database user access rights to the database we created
+```cmd
+GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
+```
+Exit the SQL prompt to get back to the postgres user's shell session. <br><br>
 [Return to Index](#index)
 
 
