@@ -14,8 +14,10 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 - [Configuring Git](#configuring-git) <br>
 - [Git Commit](#git-commit) <br>
 - [Commit Count](#commit-count) <br>
-- [Viewing the Commit History](#viewing-the-commit-history)
+- [Viewing the Commit History](#viewing-the-commit-history) <br>
 - [Go back to previous commit](#go-back-to-previous-commit) <br>
+- [Push an existing repository to server](#push-an-existing-repository-to-server) <br>
+- [Pull a repository from server to PC](#pull-a-repository-from-server-to-pc) <br>
 
 
 
@@ -181,6 +183,35 @@ git checkout master
 [Return to Index](#index)
 
 
+
+## Push an existing repository to server
+Usually **origin** is used as **remote name** & **master** is the **default branch** <br>
+To push for the first time, add a remote at first. Otherwise skip this command.
+```
+git remote add <remote_name> <repo_URL>
+```
+If you have a remote which is already added, then run
+```cmd
+git push <remote_name> <branch_name>
+```
+Moreover, to get the remote list
+```cmd
+git remote show
+```
+And, to get info about a remote_name
+```cmd
+git remote show <remote_name>
+```
+[Return to Index](#index)
+
+
+
+## Pull a repository from server to PC
+Usually **origin** is used as **remote name** & **master** is the **default branch** <br>
+```cmd
+git pull <remote_name> <branch_name>
+```
+[Return to Index](#index)
 
 
 
