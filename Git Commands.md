@@ -7,6 +7,7 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 
 ## Index: 
 - [Git Initialize](#git-initialize) <br>
+- [Add whole project to git](#add-whole-project-to-git-or-add-everything-in-a-directory) <br>
 - [Adding File or Directory to git](#adding-file-or-directory-to-git) <br>
 - [Remove from git before commit](#remove-from-git-before-commit) <br>
 - [Status of Git](#status-of-git) <br>
@@ -24,6 +25,14 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 git init
 ```
 In a whole Project Directory, **git is to be initialized only once**, and obviously this is the first Command inside a Project Directory.<br><br>
+[Return to Index](#index)
+
+
+## Add whole project to git or add everything in a directory
+At first, enter into the directory using `cd path/to/dir` & then run
+```cmd
+git add .
+```
 [Return to Index](#index)
 
 
