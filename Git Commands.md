@@ -8,6 +8,7 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 ## Index: 
 - [Git Initialize](#git-initialize) <br>
 - [Adding File or Directory to git](#adding-file-or-directory-to-git) <br>
+- [Remove from git before commit](#remove-from-git-before-commit) <br>
 - [Status of Git](#status-of-git) <br>
 - [Configuring Git](#configuring-git) <br>
 - [Git Commit](#git-commit) <br>
@@ -55,6 +56,18 @@ git add dir_name
 ```cmd
 cd path/to/dirs'/dir 
 git add dir1_name dir1_name dir2_name dirN_name
+```
+[Return to Index](#index)
+
+
+## Remove from git before commit
+To undo add for a singe file or directory
+```cmd
+git reset <filename or directory name>
+```
+To undo whole project
+```cmd
+git reset
 ```
 [Return to Index](#index)
 
@@ -110,11 +123,11 @@ git commit -am "Your Commit Words"
 **Commit all Files under a Directory Tree:**
 ```cmd
 cd path/to/your/dirnames's/dir
-git commit -m dirname
+git commit -m "Your Commit Words" dirname
 ```
 Or
 ```cmd
-git commit -m path/to/dirname
+git commit -m "Your Commit Words" path/to/dirname
 ```
 [Return to Index](#index)
 
