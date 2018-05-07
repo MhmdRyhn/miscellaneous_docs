@@ -23,7 +23,7 @@ cd path/to/your/desired/directory
 ```
 **4. Create `virtualenv`**
 ```cmd
-python3 -m virtualenv <virtualenv_dir_name>
+virtualenv -p python3 <virtualenv_dir_name>
 ```
 **5. To activate virtual environment**
 ```cmd
@@ -32,11 +32,11 @@ source bin/activate
 ```
 **6. Install or uninstall packages in virtual environment**
 ```cmd
-pip install <package_name>
+pip3 install <package_name>
 ```
 Or
 ```cmd
-pip uninstall <package_name>
+pip3 uninstall <package_name>
 ```
 **7. To deactivate virtual environment**
 ```cmd
