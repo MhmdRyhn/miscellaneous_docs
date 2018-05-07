@@ -3,8 +3,24 @@
 
 
 ## Index
+- [Open Pycharm Community Edition IDE from Linux terminal](#open-pycharm-ide-from-linux-terminal) <br>
 - [Create and use virtual environment](#create-and-use-virtual-environment) <br>
 - [Install and Uninstall Python3 Packages](#install-and-uninstall-python3-packages) <br>
+
+
+
+## Open Pycharm IDE from Linux terminal
+1. Enter into pycharm directory using `cd`
+```cmd
+cd path/into/pycharm/dir/
+cd bin/
+./pycharm.sh
+```
+Or
+```cmd
+cd <path/into/pycharm/dir>/bin && ./pycharm.sh
+```
+[Return to Index](#index) <br>
 
 
 
