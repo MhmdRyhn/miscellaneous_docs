@@ -18,6 +18,7 @@
 - [View list of Databases](#view-list-of-databases) <br>
 - [Switching Databases](#switching-databases) <br>
 - [View Tables names in a Database](#view-tables-names-in-a-database) <br>
+- [Change Files Access Permission](#change-files-access-permission) <br>
 
 
 
@@ -157,6 +158,11 @@ At first connect to Database using `\c <DB_Name>` and then run
 ```
 [Return to Index](#index)
 
+
+
+## Change Files Access Permission
+[Ubuntu manual page](http://manpages.ubuntu.com/manpages/bionic/man1/chmod.1.html) has described everything about `chmod` commad. Checkout the page for details. <br>
+[Return to Index](#index)
 
 
 
