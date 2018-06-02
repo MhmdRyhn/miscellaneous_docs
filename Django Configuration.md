@@ -3,11 +3,37 @@
 
 
 ## Table of Content
+- [Start a Django Project](#start-a-django-project) <br>
+- [Create an App](#create-an-app)
 - [Database Settings](#database-settings) <br>
    - [For PostgreSQL](#for-postgresql) , or <br>
    - [For MySQL](#for-mysql) , and then <br>
    - [Database Migration](#database-migration) <br>
 
+
+
+## Start a Django Project
+At first create and prepare [Virtual environment](https://github.com/MhmdRyhn/Miscellaneous-Code/blob/master/Python3.md#create-and-use-virtual-environment) in your desired disired directory, then enter into virtualenv using `cd` command and install required packages inside virtualenv. <br><br>
+**To start a django project enter the folloing command:**
+```cmd
+django-admin startproject banglaidj
+```
+Now, run the server using following command to check whether the project is working or not.
+```cmd
+python3 manage.py runserver
+```
+Then, enter `127.0.0.1:8000` in your brouser's address bar & see the magic. <br><br>
+[Return to Table of Content](#table-of-content)
+
+
+
+## Create an App
+Enter the directory where the `manage.py` file is, using `cd` command. Then enter following command:
+```cmd
+python3 manage.py startapp blog_post
+```
+After creating app, include the app in `INSTALLED_APPS` section in `settings.py` file. <br><br>
+[Return to Table of Content](#table-of-content)
 
 
 
