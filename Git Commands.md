@@ -16,8 +16,9 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 - [Commit Count](#commit-count) <br>
 - [Viewing the Commit History](#viewing-the-commit-history) <br>
 - [Go back to previous commit](#go-back-to-previous-commit) <br>
+- [Branching](#branching)
 - [Push an existing repository to server](#push-an-existing-repository-to-server) <br>
-- [Pull a repository from server to PC](#pull-a-repository-from-server-to-pc) <br>
+- [Pull or Fetch a repository from server to PC](#pull-or-fetch-a-repository-from-server-to-pc) <br>
 
 
 
@@ -171,17 +172,80 @@ git shortlog -s
 ```cmd
 git show <commit_hash>
 ```
-**To view the Whole Project State at a commit**
+**To view the Whole Project State at a specific commit**
 ```cmd
 git checkout <commit_hash>
 ls
 ```
-**Getting back to last commit, i.e. to master branch**
+**Getting back to your branch**
 ```cmd
-git checkout master
+git checkout <branch-name>
 ```
 [Return to Index](#index)
 
+
+## Branching
+**Resources:** [**1**](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)  <br> <br>
+**To view all branches**:
+```cmd
+git branch -a
+```
+**To create a new branch**, first checkout to the parent branch where the child branch'll be created from.
+```cmd
+git checkout <branch-name>
+```
+Then execute following command.
+```cmd
+git branch <name-of-new-branch>
+```
+This will create the new branch, but won't switch to the newly created branch. <br> <br>
+**To create new branch and immediately auto switching to the newly created branch instead.** <br>
+At first checkout to the parent branch where the child branch'll be created from.
+```cmd
+git checkout <branch-name>
+```
+Then, execute the following command
+```cmd
+git branch -b <name-of-new-branch>
+```
+**Note**: Just write branch name using `-` separated words. Don't use single or double quotes to name the branch. <br>
+**To delete branch**:
+```cmd
+git branch -d <branch>
+```
+This deletes the specified branch. This is a “safe” operation in that, Git prevents you from deleting the branch if it has unmerged changes.
+```cmd
+git branch -D <branch>
+```
+Force delete the specified branch, even if it has unmerged changes. This is the command to use if you want to permanently throw away all of the commits associated with a particular line of development. <br> <br>
+
+The previous commands will delete a local copy of a branch. The branch may still exist in remote repos. To delete a remote branch execute the following.
+```cmd
+git push origin --delete <branch-name>
+```
+or
+```cmd
+git push origin :<branch-name>
+```
+
+**To rename the current branch**:
+1. To rename the current branch
+```cmd
+git branch -m <new-name-of-current-branch>
+```
+2. If you are on different branch, then
+```cmd
+git branch -m <old-name-of-branch> <new-name-of-branch>
+```
+3. If the branch is on remote, delete the old-name remote branch and push the new-name local branch.
+```cmd
+git push origin :<old-name-of-branch> <new-name-of-branch>
+```
+4. Reset the upstream branch for the new-name local branch. To do this, switch to the branch and then execute the following.
+```cmd
+git push origin -u <new-name-of-branch>
+```
+[Return to Index](#index)
 
 
 ## Push an existing repository to server
@@ -206,7 +270,19 @@ git remote show <remote_name>
 
 
 
-## Pull a repository from server to PC
+## Pull or Fetch a repository from server to PC
+The **problem** with **pull** is that, it fetches and merges everything. There can happen merge conflict. So it is safe to use fetch command.
+```cmd
+git fetch
+```
+Then, checkout to the branch you want to work with.
+```cmd
+git checkout <branch-name>
+```
+Now, reset your-HEAD to the working-branch-HEAD
+```cmd
+git reset --hard <branch-name>
+```
 Usually **origin** is used as **remote name** & **master** is the **default branch** <br>
 ```cmd
 git pull <remote_name> <branch_name>
