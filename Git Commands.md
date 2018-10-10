@@ -162,7 +162,12 @@ git shortlog -s
 [Return to Index](#index)
 
 ## Viewing the Commit History
-[**Watch this awesome Documentation to get clear concept**](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) <br><br>
+#### Draw a text-based graphical representation of the commit history
+```cmd
+git log --oneline --graph --color --all --decorate
+```
+1. [**Watch this awesome Documentation to get clear concept**](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) <br><br>
+2. [**git log [1]**](https://git-scm.com/docs/git-log) <br><br>
 [Return to Index](#index)
 
 
