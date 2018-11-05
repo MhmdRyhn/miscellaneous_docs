@@ -9,6 +9,7 @@
    - [For PostgreSQL](#for-postgresql) , or <br>
    - [For MySQL](#for-mysql) , and then <br>
    - [Database Migration](#database-migration) <br>
+   - [Create Models From DB Table](create-models-from-db-table) <br>
 
 
 
@@ -98,6 +99,26 @@ python3 manage.py runserver
 ```
 [Return to Table of Content](#table-of-content)
 
+### Create Models From DB Table
+Follow the steps below
+1. Login to PostgreSQL
+```cmd
+sudo -i -u postgres
+psql
+```
+2. Connect to your desired DB
+```cmd
+\c <DB_Name>
+```
+3. Grant all permission to DB
+```cmd
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO db_username;
+```
+4. Now, enter following command & get a `filename.py` file in your working directory
+```cmd
+python3 manage.py inspectdb > filename.py
+```
+[Return to Table of Content](#table-of-content)
 
 
 
