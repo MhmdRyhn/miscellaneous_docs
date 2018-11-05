@@ -9,7 +9,7 @@
    - [For PostgreSQL](#for-postgresql) , or <br>
    - [For MySQL](#for-mysql) , and then <br>
    - [Database Migration](#database-migration) <br>
-   - [Create Models From DB Table](create-models-from-db-table) <br>
+   - [Create Models From DB Table](#create-models-from-db-table) <br>
 
 
 
