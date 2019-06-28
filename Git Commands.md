@@ -16,12 +16,12 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 - [Commit Count](#commit-count) <br>
 - [Viewing the Commit History](#viewing-the-commit-history) <br>
 - [Go back to previous commit](#go-back-to-previous-commit) <br>
-- [Branching](#branching)
-  - [View all branches](view-all-branches)
-  - [Create new branch](create-new-branch)
-  - [Delete branch](delete-branch)
-  - [Rename the current branch](rename-the-current-branch)
-- [Changing a remote URL](changing-a-remote-url)
+- [Branching](#branching) <br>
+  - [View all branches](#view-all-branches) <br>
+  - [Create new branch](#create-new-branch) <br>
+  - [Delete branch](#delete-branch) <br>
+  - [Rename the current branch](#rename-the-current-branch) <br>
+- [Changing a remote URL](#changing-a-remote-url) <br>
 - [Push an existing repository to server](#push-an-existing-repository-to-server) <br>
 - [Pull or Fetch a repository from server to PC](#pull-or-fetch-a-repository-from-server-to-pc) <br>
 
@@ -197,14 +197,18 @@ git checkout <branch-name>
 ## Branching
 **Resources:** [**1**](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)  <br> <br>
 
-## View all branches
+[Return to Index](#index)
+
+
+### View all branches
 **To view all branches**, enter the following command:
 ```cmd
 git branch -a
 ```
+[Return to Index](#index)
 
 
-## Create new branch
+### Create new branch
 **To create a new branch**, first checkout to the parent branch where the child branch'll be created from.
 ```cmd
 git checkout <branch-name>
@@ -225,10 +229,12 @@ Then, execute the following command
 git branch -b <name-of-new-branch>
 ```
 This will create a branch and will immediately checkout to the newly create branch immediately. <br> <br>
-**Note**: Just write branch name using `-` or `_` separated words. **Don't use single or double quotes to name the branch**. <br>
+**Note**: Just write branch name using `-` or `_` separated words. **Don't use single or double quotes to name the branch**. <br> <br>
+
+[Return to Index](#index)
 
 
-## Delete branch
+### Delete branch
 **To delete branch locally:**
 To delete a branch **safely**, at first checkout th another branch which is **not** going to be deleted. Then execute the following command.
 ```cmd
@@ -251,8 +257,10 @@ or
 ```cmd
 git push origin :<branch-name>
 ```
+[Return to Index](#index)
 
-## Rename the current branch
+
+### Rename the current branch
 - To rename the current branch where you are currently checked out
 ```cmd
 git branch -m <new-name-of-current-branch>
