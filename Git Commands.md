@@ -195,6 +195,7 @@ git checkout <branch-name>
 
 ## Branching
 **Resources:** [**1**](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)  <br> <br>
+
 ### View all branches
 **To view all branches**, enter the following command:
 ```cmd
@@ -212,7 +213,8 @@ Then execute following command.
 git branch <name-of-new-branch>
 ```
 This will create the new branch, but won't switch to the newly created branch. <br> <br>
-**To create new branch and immediately auto switching to the newly created branch instead.** <br>
+
+**To create new branch and immediately auto switching to the newly created branch:** <br>
 At first checkout to the parent branch where the child branch'll be created from.
 ```cmd
 git checkout <branch-name>
@@ -225,7 +227,7 @@ This will create a branch and will immediately checkout to the newly create bran
 **Note**: Just write branch name using `-` or `_` separated words. **Don't use single or double quotes to name the branch**. <br>
 
 
-### delete branch
+### Delete branch
 **To delete branch locally:**
 To delete a branch **safely**, at first checkout th another branch which is **not** going to be deleted. Then execute the following command.
 ```cmd
