@@ -17,6 +17,10 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
 - [Viewing the Commit History](#viewing-the-commit-history) <br>
 - [Go back to previous commit](#go-back-to-previous-commit) <br>
 - [Branching](#branching)
+  - [View all branches](view-all-branches)
+  - [Create new branch](create-new-branch)
+  - [Delete branch](delete-branch)
+  - [Rename the current branch](rename-the-current-branch)
 - [Push an existing repository to server](#push-an-existing-repository-to-server) <br>
 - [Pull or Fetch a repository from server to PC](#pull-or-fetch-a-repository-from-server-to-pc) <br>
 
@@ -191,10 +195,14 @@ git checkout <branch-name>
 
 ## Branching
 **Resources:** [**1**](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)  <br> <br>
-**To view all branches**:
+### View all branches
+**To view all branches**, enter the following command:
 ```cmd
 git branch -a
 ```
+
+
+### Create new branch
 **To create a new branch**, first checkout to the parent branch where the child branch'll be created from.
 ```cmd
 git checkout <branch-name>
@@ -213,17 +221,25 @@ Then, execute the following command
 ```cmd
 git branch -b <name-of-new-branch>
 ```
-**Note**: Just write branch name using `-` separated words. Don't use single or double quotes to name the branch. <br>
-**To delete branch**:
+This will create a branch and will immediately checkout to the newly create branch immediately. <br> <br>
+**Note**: Just write branch name using `-` or `_` separated words. **Don't use single or double quotes to name the branch**. <br>
+
+
+### delete branch
+**To delete branch locally:**
+To delete a branch **safely**, at first checkout th another branch which is **not** going to be deleted. Then execute the following command.
 ```cmd
-git branch -d <branch>
+git branch -d <branch-not-to-be-deleted>
 ```
-This deletes the specified branch. This is a “safe” operation in that, Git prevents you from deleting the branch if it has unmerged changes.
+This deletes the specified branch. This is a “safe” operation in that, Git prevents you from deleting the branch if it has unmerged changes. <br> <br>
+
+**But**, to delete a branch **forcely**, at first checkout th another branch which is **not** going to be deleted. Then execute the following command.
 ```cmd
-git branch -D <branch>
+git branch -D <branch-to-be-deleted>
 ```
 Force delete the specified branch, even if it has unmerged changes. This is the command to use if you want to permanently throw away all of the commits associated with a particular line of development. <br> <br>
 
+**To delete branch from remote:**
 The previous commands will delete a local copy of a branch. The branch may still exist in remote repos. To delete a remote branch execute the following.
 ```cmd
 git push origin --delete <branch-name>
@@ -233,20 +249,20 @@ or
 git push origin :<branch-name>
 ```
 
-**To rename the current branch**:
-1. To rename the current branch
+### Rename the current branch
+- To rename the current branch where you are currently checked out
 ```cmd
 git branch -m <new-name-of-current-branch>
 ```
-2. If you are on different branch, then
+- If you are on different branch, then
 ```cmd
 git branch -m <old-name-of-branch> <new-name-of-branch>
 ```
-3. If the branch is on remote, delete the old-name remote branch and push the new-name local branch.
+- If the branch is on remote, delete the old-name remote branch and push the new-name local branch.
 ```cmd
 git push origin :<old-name-of-branch> <new-name-of-branch>
 ```
-4. Reset the upstream branch for the new-name local branch. To do this, switch to the branch and then execute the following.
+- Reset the upstream branch for the new-name local branch. To do this, switch to the branch and then execute the following.
 ```cmd
 git push origin -u <new-name-of-branch>
 ```
