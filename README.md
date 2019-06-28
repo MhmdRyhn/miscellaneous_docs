@@ -1,3 +1,3 @@
-# Miscellaneous-Code
+# Miscellaneous Docs
 
-Collection of different types of CODES and COMMANDS and Useful Resources.
+Collection of different types of COMMANDS and Useful Resources.
