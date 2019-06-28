@@ -21,6 +21,7 @@ If you speak **Bengali**, you can visit [**Here**](https://www.youtube.com/watch
   - [Create new branch](create-new-branch)
   - [Delete branch](delete-branch)
   - [Rename the current branch](rename-the-current-branch)
+- [Changing a remote URL](changing-a-remote-url)
 - [Push an existing repository to server](#push-an-existing-repository-to-server) <br>
 - [Pull or Fetch a repository from server to PC](#pull-or-fetch-a-repository-from-server-to-pc) <br>
 
@@ -196,14 +197,14 @@ git checkout <branch-name>
 ## Branching
 **Resources:** [**1**](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)  <br> <br>
 
-### View all branches
+## View all branches
 **To view all branches**, enter the following command:
 ```cmd
 git branch -a
 ```
 
 
-### Create new branch
+## Create new branch
 **To create a new branch**, first checkout to the parent branch where the child branch'll be created from.
 ```cmd
 git checkout <branch-name>
@@ -227,7 +228,7 @@ This will create a branch and will immediately checkout to the newly create bran
 **Note**: Just write branch name using `-` or `_` separated words. **Don't use single or double quotes to name the branch**. <br>
 
 
-### Delete branch
+## Delete branch
 **To delete branch locally:**
 To delete a branch **safely**, at first checkout th another branch which is **not** going to be deleted. Then execute the following command.
 ```cmd
@@ -251,7 +252,7 @@ or
 git push origin :<branch-name>
 ```
 
-### Rename the current branch
+## Rename the current branch
 - To rename the current branch where you are currently checked out
 ```cmd
 git branch -m <new-name-of-current-branch>
@@ -268,6 +269,19 @@ git push origin :<old-name-of-branch> <new-name-of-branch>
 ```cmd
 git push origin -u <new-name-of-branch>
 ```
+[Return to Index](#index)
+
+
+## Changing a remote URL
+At first, get information about all your existing remotes' name and their corresponding URL.
+```cmd
+git remote -v
+```
+Now, change URL using the following command.
+```cmd
+git remote set-url <remote-name> <remote-URL>
+```
+Now, verify the change using `git remote -v` <br> <br>
 [Return to Index](#index)
 
 
