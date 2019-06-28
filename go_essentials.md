@@ -2,8 +2,8 @@
 
 
 # Table of content
-- [Running a go program](running-a-go-program)
-- [Starting a go project](starting-a-go-project)
+- [Running a go program](#running-a-go-program)
+- [Starting a go project](#starting-a-go-project)
 
 
 
@@ -14,7 +14,7 @@ go run code.go
 ```
 Here, in `code.go`, **code** is your go file name. <br>
 **Note:** **code.go** must have the **main()** function.
-<br><br> [***Return to Table of content***](table-of-content)
+<br><br> [***Return to Table of content***](#table-of-content)
 
 
 
@@ -31,5 +31,5 @@ Now, initialize a go module
 ```
 go mod init github.com/<username>/<reponame>
 ```
-[***Return to Table of content***](table-of-content)
+[***Return to Table of content***](#table-of-content)
 
