@@ -6,6 +6,7 @@
 # Table of Contents
 - [Resources](#resources)
 - [Basic structure of ansible playbooks](#basic-structure-of-ansible-playbooks)
+- [A Simple Example to Run a Playbook](#a-simple-example-to-run-a-playbook)
 
 
 
@@ -27,6 +28,44 @@ Playbook is written in **YAML** format with a **.yml** file extension. One needs
 5. **Handlers** - This section is **optional**. Handlers are just like regular tasks in an Ansible playbook, but are only run if a task contains a **notify** directive and also indicates that it changed something. A handler can be **re-used multiple times** whilst our Playbook runs.
 
 <br> [**Return to Table of Contents**](#table-of-contents)
+
+
+
+## A Simple Example to Run a Playbook
+Lets say, I have an **AWS EC2** machine and its `Public IP`: `6.81.113.164`, `Username` : `ubuntu` and the `Private key file` : `learning-ansible-ec2-keypair.pem`. In this machine (the host), a public repository from github will be cloned inside the `/home/ubuntu/docs/` directory (make sure the directory is empty). <br><br> 
+
+First, configure the **hosts** file `/etc/ansible/hosts`. Open the hosts file using `sudo` privileges like `sudo nano /etc/ansible/hosts` and write the following:
+```
+learning-ansible ansible_host=6.81.113.164 ansible_user=ubuntu ansible_private_key_file=/home/local_machine_username/Desktop/learning-ansible-ec2-keypair.pem
+```
+Here, **learning-ansible** is the alias for your host machine. <br><br>
+
+Then, include the `hosts` file in `/etc/ansible/ansible.cfg` file. Open the config file using `sudo` privileges and write the following under `[defaults]` section, which then look like:
+```
+[defaults]
+hostfile = hosts
+```
+Then, create a playbook named `clone_repo.yml` and write the following instructions inside the playbook.
+```yml
+---
+
+- hosts: learning-ansible
+  
+  tasks:
+    - name: Clone git repo
+      git:
+        repo: https://github.com/MhmdRyhn/miscellaneous_docs.git
+        dest: /home/ubuntu/docs/
+        clone: yes
+```
+Now, run the playbook using the following command.
+```cmd
+ansible-playbook clone_repo.yml
+```
+When the playbook is finished executing successfully, the repository will be seen in the host machine (AWS EC2 Instance). <br>
+
+<br> [**Return to Table of Contents**](#table-of-contents)
+
 
 
 
