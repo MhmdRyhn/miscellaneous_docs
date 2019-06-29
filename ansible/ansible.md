@@ -4,7 +4,7 @@ Ansible is an open source **IT Configuration Management**, **Deployment** & **Pr
 
 
 
-# Table of content
+# Table of contents
 - [Resources (Docs/articles/blogs)](#resources)
 - [Ansible Installation](#ansible-installation)
 - [Basic configuration](#basic-configuration)
@@ -15,7 +15,7 @@ Ansible is an open source **IT Configuration Management**, **Deployment** & **Pr
 ## Resources
 - Configuration: [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-18-04)
 
-<br> [**Return to Table of Content**](#table-of-content)
+<br> [**Return to Table of Contents**](#table-of-contents)
 
 
 
@@ -29,7 +29,7 @@ sudo apt-get install ansible -y
 Ansible is now installed in your system. <br> <br>
 **Note:** Make sure **Python** (version 2.6 or later for Python 2 or version 3.5 or later for Python 3) is installed in your system. Because Ansible requires a Python interpreter in order to run its modules. <br>
 
-<br> [**Return to Table of Content**](#table-of-content)
+<br> [**Return to Table of Contents**](#table-of-contents)
 
 
 
@@ -69,7 +69,7 @@ Or, an **alias** can also be used
 <alias> ansible_host=<host's_ip> ansible_user=<host_machine's_username> ansible_pass=<host's password>
 ```
 
-<br> [**Return to Table of Content**](#table-of-content)
+<br> [**Return to Table of Contents**](#table-of-contents)
 
 
 
@@ -103,7 +103,7 @@ ansible -m ping <hist1:host3....:hostn>
 }
 ```
 
-<br> [**Return to Table of Content**](#table-of-content)
+<br> [**Return to Table of Contents**](#table-of-contents)
 
 
 
