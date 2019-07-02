@@ -7,11 +7,13 @@
 - [Resources](#resources)
 - [Basic structure of ansible playbooks](#basic-structure-of-ansible-playbooks)
 - [A Simple Example to Run a Playbook](#a-simple-example-to-run-a-playbook)
+- [Running Playbook Without Ansible Default Hosts and Config File](#running-playbook-without-ansible-default-hosts-and-config-file)
 
 
 
 ## Resources
 - [Ansible playbooks docs (official)](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
+- [Using **YAML** file as inventory](https://docs.ansible.com/ansible/latest/plugins/inventory/yaml.html)
 
 <br> [**Return to Table of Contents**](#table-of-contents)
 
@@ -66,6 +68,17 @@ When the playbook is finished executing successfully, the repository will be see
 
 <br> [**Return to Table of Contents**](#table-of-contents)
 
+
+
+## Running Playbook Without Ansible Default Hosts and Config File
+Create a file, say, **my_hosts** and write the following in the file. In this case we **don't** need to configure the `/etc/ansible/hosts` or `/etc/ansible/ansible.cfg` file.
+```
+learning-ansible ansible_host=6.81.113.164 ansible_user=ubuntu ansible_private_key_file=/home/local_machine_username/Desktop/learning-ansible-ec2-keypair.pem
+```
+Now, run the above playbook using the following command
+```cmd
+ansible-playbook -i /path/to/my_hosts /path/to/clone_repo.yml
+```
 
 
 
