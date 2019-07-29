@@ -1,5 +1,40 @@
 # List of Useful LINUX Commands
-<br>
+
+
+
+## Table of Contents
+- [Copy File or Folder to and from Server](copy-file-or-folder-to-and-rom-server)
+- [Create New User](create-new-user)
+- Alias
+- Apache web server
+- Directory related operation
+- File related operation
+- Hidden files'/directorys' name view
+- LAMPP/XAMPP
+- MySQL
+- System Information
+
+
+
+## Copy File or Folder to and from Server
+**To Copy file from local machine to server**
+- Using public key authentication
+```
+scp -i <public_key_file> /path/to/file/source user@ip:/path/to/the/destination
+```
+
+
+
+## Create New User
+```
+sudo adduser <username>
+```
+This'll add the user to a group named same as the username. To add the user to **sudo** group use following command
+```
+sudo usermod -aG sudo username
+```
+<br>[***Return to Table of Contents***](table-of-contents)
+
 
 
 ## Alias<br>
