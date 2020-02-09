@@ -34,11 +34,11 @@ Playbook is written in **YAML** format with a **.yml** file extension. One needs
 
 
 ## A Simple Example to Run a Playbook
-Lets say, I have an **AWS EC2** machine and its `Public IP`: `6.81.113.164`, `Username` : `ubuntu` and the `Private key file` : `learning-ansible-ec2-keypair.pem`. In this machine (the host), a public repository from github will be cloned inside the `/home/ubuntu/docs/` directory (make sure the directory is empty). <br><br> 
+Lets say, I have an **AWS EC2** machine and its `Public IP`: `6.61.103.114`, `Username` : `ubuntu` and the `Private key file` : `playing-with-ansible-ec2-keypair.pem`. In this machine (the host), a public repository from github will be cloned inside the `/home/ubuntu/docs/` directory (make sure the directory is empty). <br><br> 
 
 First, configure the **hosts** file `/etc/ansible/hosts`. Open the hosts file using `sudo` privileges like `sudo nano /etc/ansible/hosts` and write the following:
 ```
-learning-ansible ansible_host=6.81.113.164 ansible_user=ubuntu ansible_private_key_file=/home/local_machine_username/Desktop/learning-ansible-ec2-keypair.pem
+learning-ansible ansible_host=6.61.103.114 ansible_user=ubuntu ansible_private_key_file=/home/local_machine_username/Desktop/playing-with-ansible-ec2-keypair.pem
 ```
 Here, **learning-ansible** is the alias for your host machine. <br><br>
 
@@ -73,7 +73,7 @@ When the playbook is finished executing successfully, the repository will be see
 ## Running Playbook Without Ansible Default Hosts and Config File
 Create a file, say, **my_hosts** and write the following in the file. In this case we **don't** need to configure the `/etc/ansible/hosts` or `/etc/ansible/ansible.cfg` file.
 ```
-learning-ansible ansible_host=6.81.113.164 ansible_user=ubuntu ansible_private_key_file=/home/local_machine_username/Desktop/learning-ansible-ec2-keypair.pem
+learning-ansible ansible_host=6.61.103.114 ansible_user=ubuntu ansible_private_key_file=/home/local_machine_username/Desktop/playing-with-ansible-ec2-keypair.pem
 ```
 Now, run the above playbook using the following command
 ```cmd
