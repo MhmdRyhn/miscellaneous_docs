@@ -8,6 +8,7 @@
 - [Basic structure of ansible playbooks](#basic-structure-of-ansible-playbooks)
 - [A Simple Example to Run a Playbook](#a-simple-example-to-run-a-playbook)
 - [Running Playbook Without Ansible Default Hosts and Config File](#running-playbook-without-ansible-default-hosts-and-config-file)
+- [Testing Playbook Locally](testing-playbook-locally)
 
 
 
@@ -79,6 +80,13 @@ Now, run the above playbook using the following command
 ```cmd
 ansible-playbook -i /path/to/my_hosts /path/to/clone_repo.yml
 ```
+## Testing Playbook Locally
+```
+ansible-playbook --connection=local -i /path/to/my_hosts /path/to/clone_repo.yml
+```
+
+
+
 
 
 
