@@ -25,14 +25,21 @@ Example: Let's say you use **AWS ECR** as your Docker registry. To use image fro
 
 
 ## RUN vs CMD
-- **RUN** gets executed during the building of the image
-- **CMD** gets executed when a container is created from the image
+- **RUN** gets executed during the **building of the image**
+- **CMD** gets executed **when a container is created** from the image
 
-**Example of RUN:** This instruction can be used in [others forms](https://docs.docker.com/engine/reference/builder/#run).
+Example of **RUN:** This instruction can be used in [others forms](https://docs.docker.com/engine/reference/builder/#run).
 ```shell script
 RUN apt-get update -y
 ```
-**Example of CMD:** This instruction can be used in [others forms](https://docs.docker.com/engine/reference/builder/#cmd).
+Example of **CMD:** This instruction can be used in [others forms](https://docs.docker.com/engine/reference/builder/#cmd).
 ```shell script
 CMD echo "Hello World...!"
 ```
+
+
+## WORKDIR
+```shell script
+WORKDIR {a-directory-path}
+```
+When an statement with **WORKDIR** is run, all the commands after this statement will run inside this directory.
