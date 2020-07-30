@@ -10,6 +10,7 @@ and frequently used docker commands. This doc may update from time to time.
 - [Docker Lifecycle]()
 - [Image Commands]()
 - [Container Commands]()
+- [Starting Container]()
 
 
 ## Use Docker Without sudo Command
@@ -145,14 +146,14 @@ docker container ls
 docker start [OPTIONS] Container1Name/Container1ID [Container2Name/Container2ID...]
 ```
 
-#### Stop an Stopped Container
+#### Stop Container
 - To stop a running container
 ```shell script
 docker stop [OPTIONS] Container1Name/Container1ID [Container2Name/Container2ID...]
 ```
 OPTION `-t` or `--time` can be used as *seconds to wait for stop before killing it (default 10)*.
 
-#### Remove Container
+#### Remove an topped Container
 - To remove a container. User **-f** flag to remove forcefully.
 ```shell script
 docker rm [OPTIONS] Container1Name/Container1ID [Container2Name/Container2ID...]
@@ -161,3 +162,12 @@ OPTIONS:
 - -f, --force ==> Force the removal of a running container (uses SIGKILL)
 - -l, --link ==> Remove the specified link
 - -v, --volumes ==> Remove anonymous volumes associated with the container
+
+
+## Starting Container
+- Start container with port exposed. Here, `-d` means run command in detached mode.
+```shell script
+docker run -d --name {a-given-container-name} -p {from-port-of-host-machine}:{to-port-inside-container} {image-name-or-image-id}
+```
+Note: The application running inside docker must be reachable, i.e., It must run on some host which can be reached 
+from outside the docker container / the host machine.
