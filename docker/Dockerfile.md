@@ -6,6 +6,7 @@ The components of a Dockerfile is described in [Docker official Doc](https://doc
 ## Table of Contents
 - [FROM]()
 - [RUN vs CMD]()
+- [WORKDIR]()
 
 
 ## FROM
@@ -43,3 +44,10 @@ CMD echo "Hello World...!"
 WORKDIR {a-directory-path}
 ```
 When an statement with **WORKDIR** is run, all the commands after this statement will run inside this directory.
+
+
+## COPY
+- This command copies the items from host machine to docker.
+```shell script
+COPY {source_location_in_host_machine} {destination_location_in_docker}
+```
