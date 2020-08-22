@@ -21,5 +21,5 @@ After adding the content to the file save it and then allow the executable permi
 sudo chmod +x /apth/to/the/Application.desktop
 ```
 Now, open the application by double clicking the .desktop file. It'll show a dialog box saying **Untrusted 
-Application Launcher**. Click **Trust and Launch** button it'll convert the .desktop file into a desktop 
+Application Launcher**. Click **Trust and Launch** button, it'll convert the .desktop file into a desktop 
 entry with the icon and launch the application.
