@@ -3,17 +3,17 @@ Pod is the smallest unit in the kubernetes system.
 
 ## Get pods in a namespace
 ```bash
-kubectl [--namespace <namespace>] get pods
+kubectl [--namespace <namespace> | -n <namespace>] get pods
 ```
 
 ## Get pod logs
 ```bash
-kubectl logs <pod-name>
+kubectl logs <pod-name> -n <namespace>
 ```
 
 ## Get container logs running on a pod
 ```bash
-kubectl logs <pod-name> <container-name>
+kubectl logs <pod-name> <container-name> -n <namespace>
 ```
 
 ## Continually Streaming Logs
@@ -23,9 +23,11 @@ Kubectl will emit each new log line into your terminal until you stop the comman
 
 ## Get pod details as formatted JSON
 ```
-kubectl get pods governor-deployment-774fdc4f9-fgfz8 --output jsonpath='{}' | jq
+kubectl get pods <pod-name> -n <namespace> --output jsonpath='{}' | jq
 ```
 Make sure the tool `jq` is installed in your system.
+
+> **Note**: If you select the `namespace` as your default one, then there is no need of the `-n` option with each command.
 
 # References
 - [https://www.howtogeek.com/devops/how-to-view-kubernetes-pod-logs-with-kubectl/](https://www.howtogeek.com/devops/how-to-view-kubernetes-pod-logs-with-kubectl/)
